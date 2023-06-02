@@ -1,0 +1,394 @@
+html, 
+body {
+    font-family: 'Poppins';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color:aliceblue;
+}
+
+img {
+    max-width: 100%;
+    height:auto;
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Testi e H */
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    line-height: 1;
+}
+h1,
+.h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+h2, 
+.h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.copy{
+
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-top:1em;
+    margin-bottom:1em;
+    
+    }
+
+/* Fine testi */
+
+/* header */
+
+.header{ 
+    padding: 1em;
+    background-color: #2f4056;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+button{
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/* Fine header */
+
+/* immagini e loghi */
+
+.logo {
+    max-width: 4em;
+    display: inline-block;
+}
+
+.img{
+    width:30%;
+    height:30%;
+}
+
+/* fine immagini e loghi */
+
+/* Grid e parent e flex*/
+
+  .item {
+    flex: 0 0 auto;
+    margin: 6px;
+  }
+
+  .item img {
+    max-width: 5em;
+    margin: auto;
+  }
+
+
+
+
+@media screen and (min-width: 768px) {
+    .main {  display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 50%;
+        gap: 0% 0%;
+        grid-auto-flow: row;
+        justify-content: center;
+        grid-template-areas:
+          ". presentazione .";
+      }
+      
+    .presentazione {  display: grid;
+        grid-template-columns: 39% 59%;
+        grid-template-rows: 66.3% 31.7%;
+        gap: 2% 2%;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "logobio bio"
+          "logobio btns";
+        grid-area: presentazione;
+      }
+
+      .skills{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        align-content:center;
+      }
+
+
+    .item img {
+        max-width: 10em;
+    }
+}
+  
+  .bio {  display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    gap: 0% 0%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nome"
+      "testo";
+    grid-area: bio;
+    text-align:center;
+  }
+  
+  .nome {
+    justify-self: center;
+    align-self: center;
+    grid-area: nome;
+    padding:2em;
+
+  }
+  
+  .testo {
+    justify-self: start;
+    align-self: center;
+    grid-area: testo;
+    padding:2em;
+
+  }
+  
+  .btns {  display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 100%;
+    gap: 0px 2%;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: flex-end;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      "btn1 btn2 btn3";
+    grid-area: btns;
+
+  }
+  
+  .btn1 { grid-area: btn1; width:30%; margin-top:5em;}
+  
+  .btn2 { grid-area: btn2; width:30%; margin-top:5em;}
+  
+  .btn3 { grid-area: btn3; width:30%; margin-top:5em;}
+  
+  .logobio {  display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ".";
+    justify-self: center;
+    align-self: center;
+    grid-area: logo;
+    width: 100%;
+    height: 70%;
+  }
+
+
+
+  .item1 { 
+    /* flex:0 1 auto; */
+    align-self:auto;
+  }
+
+  .portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: start;
+  }
+  .item {
+    flex: 0 0 auto;
+    margin: 6px;
+  }
+
+  /* Projects Page */
+
+.projects-container {
+    height: auto;
+    column-count: 3;
+    grid-gap: 1vh;
+    margin-bottom:5em;
+    margin-top:5em;
+  }
+  
+  .projects-item img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+  
+  .projects-item a img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+  
+  .projects-item {
+    background: var(--bg-primary);
+    transition: var(--transition-speed);
+    cursor:pointer;
+    text-align:center;
+  }
+  
+  .projects-item:hover {
+    background: var(--ac-color-primary);
+  }
+  
+
+  
+	
+/* .card */
+.card {
+    margin-top: 10em;
+    margin-bottom: 10em;
+  }
+  
+  .card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 5em 1em 1em 1em;
+    padding-top: 320px;
+  }
+  
+  .card-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-title {
+    font-weight: 500;
+  }
+
+  .card-title:hover{
+    color: #bbbbbb;
+}
+  
+  .card-meta span::after {
+    content: '•';
+    margin: 0 .5em;
+  }
+  
+  .card-copy {
+    margin-bottom: 3em;
+    line-height: 2;
+    overflow: hidden;
+    display: -moz-box;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    height: 4em;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
+  /* END .card */
+
+
+/* .site-footer  */
+.site-footer {
+    padding: 0.1em 0.1em;
+    color: white;
+    background-color: #14191f;
+    margin-top: auto;
+}
+
+.site-footer-box, 
+.site-footer-box ul, 
+.site-footer-box ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.site-footer-box {
+    margin: 1em 0;
+}
+
+.site-footer-box a {
+    color: currentColor;
+}
+
+.site-footer-box ul li:not(:first-child)::before {
+    content: "";
+    height: 1px;
+    width: 1.15em;
+    margin: 0 .25em;
+    display: block;
+    background-color: #4a4a4a;
+
+}
+
+/* END .site-footer  */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Classi varie boh */
+
+.list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 67.5em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center-gif{
+  display: flex;
+  justify-content: center;
+  margin-top:10%;
+  margin-bottom:10%;
+  }
+
+
+
+/* END Utility classes */

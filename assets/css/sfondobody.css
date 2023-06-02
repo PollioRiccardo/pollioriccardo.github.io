@@ -1,0 +1,22 @@
+.gradientbody{
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+          animation: color-change-2x 2s linear infinite alternate both;
+}
+
+/* Keyframes animazioni */
+@-webkit-keyframes color-change-2x {
+0% {
+background: rgb(30,41,59);
+}
+100% {
+background:rgb(17,24,39);
+}
+}
+@keyframes color-change-2x {
+0% {
+background: rgb(41, 56, 81);
+}
+100% {
+background: rgb(12, 41, 67);
+}
+}
